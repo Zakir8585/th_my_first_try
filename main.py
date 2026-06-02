@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 
-# Загружаем переменные окружения
+
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 
-# Создаем объекты бота и диспетчера (только ОДИН раз)
+
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
