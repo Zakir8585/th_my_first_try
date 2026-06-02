@@ -1,9 +1,14 @@
+import os
 import asyncio
+from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 
-TOKEN = "8811950693:AAEduy9KwB5jRFN0_FIAXMk8dSuPd53L3s4"
+# Загружаем переменные окружения
+load_dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
 
+# Создаем объекты бота и диспетчера (только ОДИН раз)
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
